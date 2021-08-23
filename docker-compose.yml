@@ -1,0 +1,13 @@
+---
+    version: '3'
+
+    services:
+      ruby:
+        image: ruby:3.0.1
+        working_dir: /code
+        ports:
+          - "3000:3000"
+        volumes:
+          - ./code:/code
+        entrypoint: ["./run.sh"]
+    
